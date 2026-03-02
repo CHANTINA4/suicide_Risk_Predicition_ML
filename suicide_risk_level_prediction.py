@@ -22,7 +22,7 @@ from sklearn.metrics import (
 # -----------------------------------
 # 1️⃣ LOAD DATASET
 # -----------------------------------
-df = pd.read_csv(r"C:\Users\Krishna Sharma\Downloads\Suicide_case\Final_SP_dataSet.csv")
+df = pd.read_csv("Final_SP_dataSet.csv")
 
 print("Dataset Shape:", df.shape)
 print("\nFirst 5 Rows:\n", df.head())
