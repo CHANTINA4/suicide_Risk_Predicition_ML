@@ -16,7 +16,7 @@ from sklearn.metrics import (
     classification_report,
     confusion_matrix,
     roc_curve,
-    roc_auc_score
+    auc
 )
 
 # -----------------------------------
