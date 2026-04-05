@@ -75,3 +75,27 @@ Source: Kaggle
 - Chanchal Sharma  
 - Rohit Kumar Yadav  
 - Vidusha Pareek  
+
+## 📊 Model Comparison Graph
+![Model Comparison](images/model_comparison_graph.png)
+
+## 📈 ROC Curve
+![ROC Curve](images/ROC_curve.png)
+
+## Feacture importance Decision tree
+![Feacture](image/Feacture_Importance(Decision_Tree).png)
+
+## 🔲 Confusion Matrices (Model-wise)
+
+### 📌 Logistic Regression
+![Logistic Regression](images/cm_logistic.png)
+
+### 📌 Support Vector Machine (SVM)
+![SVM](images/cm_svm.png)
+
+### 📌 K-Nearest Neighbors (KNN)
+![KNN](images/cm_knn.png)
+
+### 📌 Decision Tree
+![Decision Tree](images/cm_dt.png)
+
