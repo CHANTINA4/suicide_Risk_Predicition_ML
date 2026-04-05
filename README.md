@@ -82,8 +82,7 @@ Source: Kaggle
 ## 📈 ROC Curve
 ![ROC Curve](images/ROC_curve.png)
 
-## Feacture importance Decision tree
-![Feacture](image/Feacture_Importance(Decision_Tree).png)
+
 
 ## 🔲 Confusion Matrices (Model-wise)
 
@@ -99,3 +98,5 @@ Source: Kaggle
 ### 📌 Decision Tree
 ![Decision Tree](images/cm_dt.png)
 
+## Feacture importance Decision tree
+![Feature Importance](images/Feature_Importance(Decision_Tree).png)
