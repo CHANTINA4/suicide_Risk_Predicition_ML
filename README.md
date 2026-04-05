@@ -98,5 +98,3 @@ Source: Kaggle
 ### 📌 Decision Tree
 ![Decision Tree](images/cm_dt.png)
 
-## Feacture importance Decision tree
-![Feature Importance](images/Feature_Importance(Decision_Tree).png)
