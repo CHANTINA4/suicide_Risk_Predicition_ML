@@ -17,6 +17,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import (
+    RandomForestClassifier,
+    BaggingClassifier,
+    AdaBoostClassifier,
+    GradientBoostingClassifier,
+    StackingClassifier
+)
+from xgboost import XGBClassifier
 
 # -----------------------------------
 # 1️⃣ LOAD DATA
@@ -109,6 +117,56 @@ knn_grid = GridSearchCV(KNeighborsClassifier(),
 dt_grid = GridSearchCV(DecisionTreeClassifier(random_state=42),
                        {'max_depth': [3,5,7], 'min_samples_split': [2,5,10]},
                        cv=5)
+rf_grid = GridSearchCV(
+    RandomForestClassifier(random_state=42),
+    {'n_estimators': [100, 200], 'max_depth': [5, 10, None]},
+    cv=5
+)
+
+bag_model = BaggingClassifier(
+    estimator=DecisionTreeClassifier(),
+    n_estimators=100,
+    random_state=42
+)
+
+ada_grid = GridSearchCV(
+    AdaBoostClassifier(random_state=42),
+    {'n_estimators': [50, 100], 'learning_rate': [0.5, 1.0]},
+    cv=5
+)
+
+gb_grid = GridSearchCV(
+    GradientBoostingClassifier(random_state=42),
+    {
+        'n_estimators': [100, 200],
+        'learning_rate': [0.05, 0.1],
+        'max_depth': [3, 5]
+    },
+    cv=5
+)
+
+xgb_grid = GridSearchCV(
+    XGBClassifier(
+        eval_metric='mlogloss',
+        
+        random_state=42
+    ),
+    {
+        'n_estimators': [100, 200],
+        'learning_rate': [0.05, 0.1],
+        'max_depth': [3, 5]
+    },
+    cv=5
+)
+
+stack_model = StackingClassifier(
+    estimators=[
+        ('rf', RandomForestClassifier(n_estimators=100, random_state=42)),
+        ('gb', GradientBoostingClassifier(n_estimators=100, random_state=42)),
+        ('svm', SVC(probability=True))
+    ],
+    final_estimator=LogisticRegression()
+)
 
 # -----------------------------------
 # 7️⃣ TRAIN + EVALUATE
@@ -117,7 +175,12 @@ evaluate_model("Logistic Regression", log_grid)
 evaluate_model("SVM", svm_grid)
 evaluate_model("KNN", knn_grid)
 evaluate_model("Decision Tree", dt_grid)
-
+evaluate_model("Random Forest", rf_grid)
+evaluate_model("Bagging", bag_model)
+evaluate_model("AdaBoost", ada_grid)
+evaluate_model("Gradient Boosting", gb_grid)
+evaluate_model("XGBoost", xgb_grid)
+evaluate_model("Stacking", stack_model)
 print("\nStored Results:", results)
 
 # -----------------------------------
@@ -175,7 +238,13 @@ models = [
     ("Logistic Regression", log_grid),
     ("SVM", svm_grid),
     ("KNN", knn_grid),
-    ("Decision Tree", dt_grid)
+    ("Decision Tree", dt_grid),
+    ("Random Forest", rf_grid),
+    ("Bagging", bag_model),
+    ("AdaBoost", ada_grid),
+    ("Gradient Boosting", gb_grid),
+    ("XGBoost", xgb_grid),
+    ("Stacking", stack_model)
 ]
 
 for name, model in models:
