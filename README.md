@@ -1,80 +1,93 @@
 # Suicide Risk Level Prediction (ML Project)
 
-## 📌 Project Overview
+##  Project Overview
 This project predicts suicide risk level using psychological and demographic features through Machine Learning models. The goal is to identify individuals at risk and support early intervention.
 
 ---
 
-## 📊 Dataset
-Source: Kaggle  
+##  Dataset
+Source: Kaggle
 
 ### Features:
-- Depression Level  
-- Anxiety Level  
-- Stress Level  
-- Self Harm History  
-- Mental Support  
-- Family Problem  
-- Relationship Condition  
-- Age  
-- Gender  
-- Academic Performance  
-- Health Condition  
+- Depression Level
+- Anxiety Level
+- Stress Level
+- Self Harm History
+- Mental Support
+- Family Problem
+- Relationship Condition
+- Age
+- Gender
+- Academic Performance
+- Health Condition
 
-### 🎯 Target Variable:
+###  Target Variable:
 - Suicide Attempt (Risk Level)
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
-- Missing value handling  
-- Correlation heatmap  
-- Feature importance analysis  
-- Class distribution check  
+##  Exploratory Data Analysis (EDA)
+- Missing value handling
+- Correlation heatmap
+- Feature importance analysis
+- Class distribution check
 
 ---
 
-## 🤖 Machine Learning Models Used
+##  Machine Learning Models Used
 
-- Logistic Regression (Baseline Model)  
-- Support Vector Machine (SVM - RBF Kernel) ⭐ Best Model  
-- K-Nearest Neighbors (KNN)  
-- Decision Tree  
+### Base Models
+- Logistic Regression
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- Decision Tree
 
----
-
-## 📈 Evaluation Metrics
-
-- Accuracy  
-- Confusion Matrix  
-- ROC-AUC Curve  
-- Classification Report  
-
----
-
-## 🏆 Results
-
-- SVM achieved the best performance among all models  
-- Model comparison done using accuracy and ROC-AUC  
+### Advanced / Ensemble Models
+- Random Forest
+- Bagging
+- AdaBoost
+- Gradient Boosting
+- XGBoost
+- Stacking
 
 ---
 
-## 🛠️ Technologies Used
+##  Evaluation Metrics
 
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- Scikit-learn  
+- Accuracy
+- Confusion Matrix
+- ROC-AUC Curve
+- Classification Report
+
+---
+
+##  Results
+
+- Multiple models were compared using Accuracy and ROC-AUC.
+- Ensemble models improved prediction performance.
+- Best model selected based on final evaluation metrics.
+
+---
+
+##  Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
 
 ---
 
 ## 👥 Team Members
 
-- Chanchal Sharma  
-- Rohit Kumar Yadav  
-- Vidusha Pareek  
+- Chanchal Sharma
+- Rohit Kumar Yadav
+- Vidusha Pareek
+
+---
 
 ## 📊 Model Comparison Graph
 ![Model Comparison](images/Final_model.png)
@@ -113,6 +126,7 @@ Source: Kaggle
 
 ### 📌 Stacking
 ![Stacking](images/cm_stacking.png)
+
 
 
 
