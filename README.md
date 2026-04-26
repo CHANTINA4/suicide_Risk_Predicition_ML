@@ -77,10 +77,10 @@ Source: Kaggle
 - Vidusha Pareek  
 
 ## 📊 Model Comparison Graph
-![Model Comparison](images/model_comparison_graph.png)
+![Model Comparison](images/Final_model.png)
 
 ## 📈 ROC Curve
-![ROC Curve](images/ROC_curve.png)
+![ROC Curve](images/roc_crv.png)
 
 ## ◻️ Confusion Matrices (Model-wise)
 
@@ -112,10 +112,8 @@ Source: Kaggle
 ![XGBoost](images/cm_Xgboost.png)
 
 ### 📌 Stacking
-![Stacking](images/cm_staking.png)
+![Stacking](images/cm_stacking.png)
 
-## ⭐ Feature Importance
-![Feature Importance](images/Feature_Importance.png)
 
-## 🏆 Final Best Model
-![Final Model](images/Final_model.png)
+
+
