@@ -82,9 +82,7 @@ Source: Kaggle
 ## 📈 ROC Curve
 ![ROC Curve](images/ROC_curve.png)
 
-
-
-## 🔲 Confusion Matrices (Model-wise)
+## ◻️ Confusion Matrices (Model-wise)
 
 ### 📌 Logistic Regression
 ![Logistic Regression](images/cm_logistic.png)
@@ -98,3 +96,26 @@ Source: Kaggle
 ### 📌 Decision Tree
 ![Decision Tree](images/cm_dt.png)
 
+### 📌 Random Forest
+![Random Forest](images/cm_RF.png)
+
+### 📌 Bagging
+![Bagging](images/cm_bag.png)
+
+### 📌 AdaBoost
+![AdaBoost](images/cm_Adaboost.png)
+
+### 📌 Gradient Boosting
+![Gradient Boosting](images/cm_GB.png)
+
+### 📌 XGBoost
+![XGBoost](images/cm_Xgboost.png)
+
+### 📌 Stacking
+![Stacking](images/cm_staking.png)
+
+## ⭐ Feature Importance
+![Feature Importance](images/Feature_Importance.png)
+
+## 🏆 Final Best Model
+![Final Model](images/Final_model.png)
